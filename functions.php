@@ -1,13 +1,13 @@
 <?php
 /**
- * _pit functions and definitions.
+ * _ngPIT functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package _pit
+ * @package _ngPIT
  */
 
-if ( ! function_exists( '_pit_setup' ) ) :
+if ( ! function_exists( '_ngPIT_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,10 +15,10 @@ if ( ! function_exists( '_pit_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function _pit_setup() {
+function _ngPIT_setup() {
 
 	// Make theme available for translation.
-	load_theme_textdomain( '_pit', get_template_directory() . '/languages' );
+	load_theme_textdomain( '_ngPIT', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -33,10 +33,10 @@ function _pit_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( '_pit-featured-image', 640, 9999 );
+	add_image_size( '_ngPIT-featured-image', 640, 9999 );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array( 'primary' => esc_html__( 'Primary', '_pit' ) ) );
+	register_nav_menus( array( 'primary' => esc_html__( 'Primary', '_ngPIT' ) ) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -49,9 +49,14 @@ function _pit_setup() {
 		'gallery',
 		'caption',
 	) );
+
+	require_once get_template_directory() .  '/includes/plugins/class-tgm-plugin-activation.php';
+    require_once get_template_directory() .  '/includes/plugins/theme-require-plugins.php';
+    add_action( 'tgmpa_register', '_ngPIT_register_required_plugins' );
+
 }
 endif;
-add_action( 'after_setup_theme', '_pit_setup' );
+add_action( 'after_setup_theme', '_ngPIT_setup' );
 
 require get_template_directory() . '/includes/svg/material-design.php';
 
@@ -61,12 +66,8 @@ require get_template_directory() . '/includes/styles-scripts.php';
 
 require get_template_directory() . '/includes/rest-api.php';
 
-require get_template_directory() . '/includes/template-tags.php';
-
 require get_template_directory() . '/includes/head.php';
 
 require get_template_directory() . '/includes/admin.php';
-
-require get_template_directory() . '/includes/nav-walker.php';
 
 require get_template_directory() . '/includes/images.php';

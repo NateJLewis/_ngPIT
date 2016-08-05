@@ -34,16 +34,21 @@ module.exports = function (grunt) {
 		  'Opera >= 12'
 		]
 	});
-	var libs = [
-		'assets/scripts/libs/angular/angular.js',
-        'assets/scripts/libs/angular/angular-animate.js',
-    	'assets/scripts/libs/angular/angular-messages.js',
-        'assets/scripts/libs/angular/angular-resource.js',
-        'assets/scripts/libs/angular/angular-sanitize.js',
-        'assets/scripts/libs/ui-router/angular-ui-router.js',
-        'assets/scripts/libs/ngCart/dist/ngCart.js'
-	]
 
+	var applibs = [
+		'assets/scripts/app-libs/angular/angular.js',
+        'assets/scripts/app-libs/angular-animate/angular-animate.js',
+    	'assets/scripts/app-libs/angular-messages/angular-messages.js',
+        'assets/scripts/app-libs/angular-resource/angular-resource.js',
+        'assets/scripts/app-libs/angular-sanitize/angular-sanitize.js',
+		'assets/scripts/app-libs/angular-aria/angular-aria.js',
+		'assets/scripts/app-libs/angular-material/angular-material.js',
+        'assets/scripts/app-libs/ui-router/angular-ui-router.js',
+
+	]
+	var app = [
+		'assets/scripts/app/app.module.js',
+	]
 	grunt.initConfig({
 
 		// watch for changes and trigger sass, jshint, uglify and livereload
@@ -65,7 +70,7 @@ module.exports = function (grunt) {
 					style: 'expanded',
 				},
 				files: {
-					'assets/styles/style.css': 'assets/styles/sass/bootstrap.scss'
+					'assets/styles/style.css': 'assets/styles/sass/style.scss'
 				}
 			}
 		},
@@ -91,26 +96,53 @@ module.exports = function (grunt) {
 				ext: '.css'
 			}
 		},
+		ngAnnotate: {
+		    options: {
+		        singleQuotes: true
+		    },
+		    libs: {
+		        files: {
+					'assets/scripts/app-libs/angular/angular.js' : ['assets/libs/angular/angular.js'],
+			        'assets/scripts/app-libs/angular-animate/angular-animate.js' : ['assets/libs/angular-animate/angular-animate.js'],
+			    	'assets/scripts/app-libs/angular-messages/angular-messages.js' : ['assets/libs/angular-messages/angular-messages.js'],
+			        'assets/scripts/app-libs/angular-resource/angular-resource.js' : ['assets/libs/angular-resource/angular-resource.js'],
+			        'assets/scripts/app-libs/angular-sanitize/angular-sanitize.js' : ['assets/libs/angular-sanitize/angular-sanitize.js'],
+					'assets/scripts/app-libs/angular-aria/angular-aria.js' : ['assets/libs/angular-aria/angular-aria.js'],
+					'assets/scripts/app-libs/angular-material/angular-material.js' : ['assets/libs/angular-material/angular-material.js'],
+			        'assets/scripts/app-libs/ui-router/angular-ui-router.js' : ['assets/libs/ui-router/angular-ui-router.js'],
+		        }
+		    },
+			app: {
+				files: {
+					'assets/scripts/app/app.module.js' : ['assets/scripts/app/app.js'],
+				}
+			}
+		},
 		concat: {
 			options: {
 				stripBanners: true
 			},
 			libs: {
-				src: libs,
-				dest: 'assets/scripts/pit-libs.js'
+				src: applibs,
+				dest: 'assets/scripts/ngpit-libs.js'
+			},
+			app: {
+				src: app,
+				dest: 'assets/scripts/ngpit-app.js'
 			}
 		},
 		uglify: {
 			plugins: {
 				files: {
-					'assets/scripts/pit.min.js': [
-						'assets/scripts/pit-libs.js',
-						'assets/scripts/pit-app.js'
+					'assets/scripts/ngpit.min.js': [
+						'assets/scripts/ngpit-libs.js',
+						'assets/scripts/ngpit-app.js'
 					]
 				}
 			}
 		}
 	});
-	grunt.registerTask('default', ['sass', 'postcss', 'cssmin', 'concat', 'uglify', 'watch']);
+	grunt.registerTask('dist', ['ngAnnotate', 'concat', 'uglify']);
+	grunt.registerTask('default', ['sass', 'postcss', 'cssmin', 'watch']);
 
 };

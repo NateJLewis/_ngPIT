@@ -3,9 +3,23 @@
 /**
  * Register the required plugins for this theme.
  */
-function _fkns_register_required_plugins() {
+function _ngPIT_register_required_plugins() {
 
 	$plugins = array(
+		// rest-api
+		array(
+			'name' 				=> 'WordPress REST API (Version 2)',
+			'slug' 				=> 'rest-api',
+			'required' 			=> true,
+			'force_activation'	=> false
+		),
+		// advanced-custom-fields
+		array(
+			'name' 				=> 'Advanced Custom Fields',
+			'slug' 				=> 'advanced-custom-fields',
+			'required' 			=> true,
+			'force_activation'	=> false
+		),
 		// acf-content-analysis-for-yoast-seo
 		array(
 			'name' 				=> 'ACF-Content Analysis for Yoast SEO',
@@ -20,33 +34,12 @@ function _fkns_register_required_plugins() {
 			'required' 			=> true,
 			'force_activation'	=> false
 		),
-		// rest-api
-		array(
-			'name' 				=> 'WordPress REST API (Version 2)',
-			'slug' 				=> 'rest-api',
-			'required' 			=> true,
-			'force_activation'	=> false
-		),
 		// better-wp-security
 		array(
 			'name' 				=> 'iThemes Security (formerly Better WP Security)',
 			'slug'				=> 'better-wp-security',
 			'required' 		    => true,
 			'force_activation'	=> false
-		),
-		// regenerate-thumbnails
-		array(
-			'name' 			    => 'Regenerate Thumbnails',
-			'slug'				=> 'regenerate-thumbnails',
-			'required' 			=> true,
-			'force_activation' 	=> false
-		),
-		// rvg-optimize-database
-		array(
-			'name' 				=> 'Optimize Database after Deleting Revisions',
-			'slug' 				=> 'rvg-optimize-database',
-			'required' 			=> true,
-			'force_activation' 	=> false
 		),
 		// wordpress-seo
 		array(
@@ -62,7 +55,6 @@ function _fkns_register_required_plugins() {
 			'required' 			=> true,
 			'force_activation'	=> false
 		),
-
 
 	);
 

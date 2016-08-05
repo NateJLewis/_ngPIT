@@ -1,23 +1,23 @@
 <?php
-function _pit_register_fields() {
+function _ngPIT_register_fields() {
     register_rest_field( 'post',
         'author_name',
         array(
-            'get_callback' => '_pit_get_author_name',
+            'get_callback' => '_ngPIT_get_author_name',
             'update_callback' => null,
             'schema' => null,
         )
     );
 }
 
-function _pit_get_author_name( $object, $field_name, $request ) {
+function _ngPIT_get_author_name( $object, $field_name, $request ) {
     return get_the_author_meta('display_name');
 }
-add_action( 'rest_api_init', '_pit_register_fields' );
+add_action( 'rest_api_init', '_ngPIT_register_fields' );
 
 
-// add_filter( 'rest_prepare_post', '_pit_post_json_fields', 12, 3 );
-// function _pit_post_json_fields( $data, $post, $context ) {
+// add_filter( 'rest_prepare_post', '_ngPIT_post_json_fields', 12, 3 );
+// function _ngPIT_post_json_fields( $data, $post, $context ) {
 // 	return [
 //         'id'                => $data->data['id'],
 //         'date'              => $data->data['date'],
@@ -37,8 +37,8 @@ add_action( 'rest_api_init', '_pit_register_fields' );
 // 	];
 // }
 
-// add_filter( 'rest_prepare_products', '_pit_product_json_fields', 12, 3 );
-// function _pit_product_json_fields( $data, $post, $context ) {
+// add_filter( 'rest_prepare_products', '_ngPIT_product_json_fields', 12, 3 );
+// function _ngPIT_product_json_fields( $data, $post, $context ) {
 //
 // 	return [
 //         'id'                => $data->data['id'],
@@ -64,8 +64,8 @@ add_action( 'rest_api_init', '_pit_register_fields' );
 //
 // }
 
-// add_filter( 'rest_prepare_product_cat', '_pit_product_category_json_fields', 12, 3 );
-// function _pit_product_category_json_fields( $data, $post, $context ) {
+// add_filter( 'rest_prepare_product_cat', '_ngPIT_product_category_json_fields', 12, 3 );
+// function _ngPIT_product_category_json_fields( $data, $post, $context ) {
 //
 // 	return [
 //         'id'                => $data->data['id'],

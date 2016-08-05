@@ -7,5 +7,5 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package _pit
+ * @package _ngPIT
  */

@@ -1,7 +1,7 @@
 {
-  "name": "_pit",
+  "name": "ngpit",
   "version": "0.0.5",
-  "description": "A custom site build for practicalit.info",
+  "description": "A starter theme using AngularJS, Angular Material, and the WordPress _S base theme.",
   "main": "index.js",
   "scripts": {},
   "repository": {
@@ -14,18 +14,19 @@
   ],
   "author": "PracticalIT",
   "license": "GPL-2.0+",
-  "devDependencies": {},
-  "dependencies": {
-    "autoprefixer": "^6.3.6",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-ng-annotate": "^2.0.2",
     "grunt-postcss": "^0.8.0",
     "load-grunt-tasks": "^3.5.0"
-  }
+  },
+  "dependencies": {}
 }

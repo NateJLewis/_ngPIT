@@ -1,0 +1,32 @@
+{
+  "name": "ngpit",
+  "description": "A starter theme using AngularJS, Angular Material, and the WordPress _S base theme.",
+  "main": "index.js",
+  "authors": [
+    "PracticalIT"
+  ],
+  "license": "GPL-2.0+",
+  "keywords": [
+    "Web",
+    "Development",
+    "Web",
+    "Hosting"
+  ],
+  "homepage": "https://github.com/NateJLewis/_ngPIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-material": "^1.0.9"
+  }
+}
