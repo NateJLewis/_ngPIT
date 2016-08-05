@@ -1,0 +1,13 @@
+/node_modules
+/components
+/*.sublime-*
+npm-debug.log
+.idea
+.sass-cache/*
+/assets/images/affiliate_banners/*
+/assets/images/design_cpt/*
+/assets/images/home_page/*
+/assets/images/portfolio_samples/*
+/assets/images/post_samples/*
+/assets/images/social_media/*
+/assets/scripts/libs/*

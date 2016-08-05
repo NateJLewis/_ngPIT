@@ -1,0 +1,31 @@
+{
+  "name": "_pit",
+  "version": "0.0.5",
+  "description": "A custom site build for practicalit.info",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Web Development",
+    "Web Hosting"
+  ],
+  "author": "PracticalIT",
+  "license": "GPL-2.0+",
+  "devDependencies": {},
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}
