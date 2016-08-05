@@ -13,7 +13,7 @@ A starter theme using AngularJS, Angular Material, and the WordPress _S base the
 * Google Analytics for WordPress
 
 ### Installing Required and Suggested Plugins
-Both the required and suggested plugins are added via the [TGM_Plugin_Activation class](/includes/plugins/class-tgm-plugin-activation.php) created by [Thomas Griffin](http://tgmpluginactivation.com/). Once the theme is activated click on the "Activate required plugins" link in the notification to automatically download the plugins.
+Both the required and suggested plugins are added via the [TGM_Plugin_Activation class](/includes/plugins/class-tgm-plugin-activation.php) created by [Thomas Griffin](http://tgmpluginactivation.com/). Once the theme is activated click on the "Activate required plugins" link in the notification to automatically download the plugins. To adjust the list of required / suggested plugins add or remove items from the [$plugins array](/includes/plugins/theme-require-plugins.php#L8).
 
 ## Theme setup
 * Run `sudo npm install`

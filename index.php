@@ -1,6 +1,6 @@
 <?php
 /**
- * @package _ngtvk
+ * @package _ngPIT
  */
 if ( is_page( 'admin' ) ) :
 

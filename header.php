@@ -5,7 +5,7 @@
  * @package _tvk
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> ng-app="tvkApp">
+<html <?php language_attributes(); ?> ng-app="ngPITApp">
 	<head><?php
 		get_template_part( 'components/head/head', 'meta' );
 		get_template_part( 'components/head/head', 'favicons' );
