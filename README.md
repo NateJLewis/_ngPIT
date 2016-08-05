@@ -14,13 +14,13 @@ A starter theme using AngularJS, Angular Material, and the WordPress _S base the
 
 ### Theme setup
 * Run `sudo npm install`
-* Run 'bower install'
+* Run `bower install`
 
 ### Build SASS, Add Browser Prefixes, Concat, Minify, Watch for changes
-* Run 'grunt dist'
-** Runs ngAnnotate, concat, uglify
+* Run `grunt dist`
+  * Runs ngAnnotate, concat, uglify
 * Run `grunt default`
-** sass
-** postcss
-** cssmin
-** watch
+  * sass
+  * postcss
+  * cssmin
+  * watch
