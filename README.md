@@ -1,4 +1,4 @@
-# NOTE: This project is under development. It does not work as is. I will remove this comment once it is in good working order! Thank you for your patience. 
+## NOTE: This project is under development. It does not work as is. I will remove this comment once it is in good working order! Thank you for your patience. 
 # _ngPIT
 A starter theme using AngularJS, Angular Material, and the WordPress _S base theme.
 
